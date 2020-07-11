@@ -12,5 +12,6 @@ git clone https://github.com/Shougo/neocomplete.vim.git
 git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/python-mode/python-mode.git
 git clone --recurse-submodules https://github.com/python-mode/python-mode.git
+git clone https://github.com/arp242/confirm_quit.vim.git
 ```
 * Also install ripgrep so it can be used with `:grep`
