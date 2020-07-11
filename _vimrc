@@ -37,7 +37,9 @@ let g:neocomplete#enable_at_startup=1
 " --- GUI Specific ----
 if has("gui_running")
 	colorscheme desert
-	set renderoptions=type:directx
+	if has("win32")
+		set renderoptions=type:directx
+	endif
 	set guifont=Fira_Code:h12
 endif
 " --- Prefer RipGrep --

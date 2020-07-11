@@ -1,0 +1,8 @@
+Used plugins
+=============
+ctrlp.vim
+neocomplete.vim
+nerdtree
+python-mode
+RltvNmbr.vim
+vim-go
