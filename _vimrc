@@ -94,6 +94,8 @@ set backspace=indent,eol,start  " more powerful backspacing
 " Display all matching files for tab complete
 set wildmenu
 filetype plugin on
+" Java auto complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " ----------------- Auto complete and Nav-------
 "  windows: https://github.com/universal-ctags/ctags-win32/releases
 command! MakeTags !ctags -R .
@@ -122,3 +124,4 @@ let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
 "  - list all buffers
 " :b
 "  - go to buffer, we can use tab completion here as well
+"

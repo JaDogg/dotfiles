@@ -7,3 +7,4 @@ nerdtree
 python-mode
 RltvNmbr.vim
 vim-go
+vim-javacomplete2
