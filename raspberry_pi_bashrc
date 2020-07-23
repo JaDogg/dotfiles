@@ -128,7 +128,9 @@ export PATH=$PATH:$M2_HOME/bin
 alias import_bashrc='source ~/.bashrc'
 alias edit_bashrc='vi ~/.bashrc'
 alias l='ls -ltrah'
+alias c='clear; ls -ltrah'
 alias rm='rm -i'
+alias act='. .venv/bin/activate'
 
 # Vi Mode for editing
 set -o vi
