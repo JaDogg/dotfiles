@@ -56,11 +56,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -85,21 +80,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -112,7 +93,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Environment Variables ------------------
+# --------------- Environment Variables ------------------
 
 export JAVA_HOME=/usr/lib/jvm/default-java
 export M2_HOME=/home/pi/maven
@@ -122,8 +103,7 @@ export PATH=$PATH:/home/pi/scripts
 export PATH=$PATH:/home/pi/.local/bin
 export PATH=$PATH:$M2_HOME/bin
 
-# ---- Alias ---------------
-
+# --------------- Alias ------------------
 
 alias import_bashrc='source ~/.bashrc'
 alias edit_bashrc='vi ~/.bashrc'
@@ -132,5 +112,16 @@ alias c='clear; ls -ltrah'
 alias rm='rm -i'
 alias act='. .venv/bin/activate'
 
+# --------------- Powerline  ------------------
+
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
+# --------------- Configure Shell  ------------------
 # Vi Mode for editing
 set -o vi
