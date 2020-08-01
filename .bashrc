@@ -111,6 +111,7 @@ alias l='ls -ltrah'
 alias c='clear; ls -ltrah'
 alias rm='rm -i'
 alias act='. .venv/bin/activate'
+alias pg='ping google.com'
 
 # --------------- Powerline  ------------------
 
