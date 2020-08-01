@@ -88,6 +88,7 @@ ca shell Shell
 
 syntax enable " colours
 set backspace=indent,eol,start  " more powerful backspacing
+set spell
 
 " Search down in to subfolders
 " set path+=**
@@ -99,23 +100,28 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " ----------------- Auto complete and Nav-------
 "  windows: https://github.com/universal-ctags/ctags-win32/releases
 command! MakeTags !ctags -R .
+
+" python
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
+
+" ------------------------------------------------------------------------
+"                            Cheat Sheet
+" ------------------------------------------------------------------------
+
 " use Control+] to jump to tag
 " g Control+] to jump to fuzzy tag
 " Control+t to go back in tag stack
 " Control+n - basic auto complete
 " Control+x Control+f - auto complete file names
 " Control+x Control+n - just this file
-" Control+x s - spell compelte
+" Control+x s - spell complete
 "
-" --------------- File Browser ------------------
-" Defaults for ntrw
-let g:netrw_banner=0
-let g:netrw_browse_split=4 " open prior window
-let g:netrw_altv=1
-let g:netrw_liststyle=3
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
-
 " ----------------- Guide  --------------------- 
 " ---
 " :find <name>
