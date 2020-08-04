@@ -40,3 +40,4 @@ set -Ua fish_user_paths /home/pi/scripts
 set -Ua fish_user_paths /home/pi/.local/bin
 set -Ua fish_user_paths /home/pi/maven/bin
 
+set -U fish_greeting ""
