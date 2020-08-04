@@ -126,3 +126,6 @@ fi
 # --------------- Configure Shell  ------------------
 # Vi Mode for editing
 set -o vi
+
+
+export GPG_TTY=$(tty)

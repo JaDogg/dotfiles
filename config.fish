@@ -41,3 +41,5 @@ set -Ua fish_user_paths /home/pi/.local/bin
 set -Ua fish_user_paths /home/pi/maven/bin
 
 set -U fish_greeting ""
+
+set -gx GPG_TTY (tty)
