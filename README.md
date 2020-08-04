@@ -14,6 +14,8 @@ git clone https://github.com/python-mode/python-mode.git
 git clone --recurse-submodules https://github.com/python-mode/python-mode.git
 git clone https://github.com/arp242/confirm_quit.vim.git
 git clone https://github.com/artur-shaik/vim-javacomplete2.git
+git clone https://github.com/vim-airline/vim-airline-themes.git
+git clone https://github.com/vim-airline/vim-airline.git
 cd .vim/pack/vendor/start/vim-javacomplete2/libs/javavi
 mvn compile
 ```

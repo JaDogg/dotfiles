@@ -101,6 +101,10 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 "  windows: https://github.com/universal-ctags/ctags-win32/releases
 command! MakeTags !ctags -R .
 
+" Toggle highlight search
+let hlstate=0
+nmap <leader>h :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>:echo "toggled visibility for hlsearch"<cr>
+
 " python
 " vim-python
 augroup vimrc-python
@@ -109,6 +113,9 @@ augroup vimrc-python
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
+
+" Enable Airline fonts
+let g:airline_powerline_fonts = 1
 
 " ------------------------------------------------------------------------
 "                            Cheat Sheet

@@ -6,5 +6,7 @@ neocomplete.vim
 nerdtree
 python-mode
 RltvNmbr.vim
+vim-airline
+vim-airline-themes
 vim-go
 vim-javacomplete2
