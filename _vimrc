@@ -31,6 +31,8 @@ set listchars=tab:\|\ ,trail:.,extends:\#,nbsp:.
 :nmap <leader>n :NERDTreeToggle<CR>
 " press \s to toggle ctrlp
 :nmap <leader>s :CtrlPMixed<CR>
+" press \S to toggle spell check
+:map <leader>S :setlocal spell! spelllang=en_us<CR>
 " Enable NEO Compplete at startup
 let g:neocomplete#enable_at_startup=1
 " ----------
