@@ -31,6 +31,7 @@ alias c='clear; ls -ltrah'
 alias rm='rm -i'
 alias act='. .venv/bin/activate.fish'
 alias pg='ping google.com'
+alias git_gpg_enable='git config commit.gpgsign true'
 
 set JAVA_HOME /usr/lib/jvm/default-java
 set  M2_HOME /home/pi/maven
@@ -43,3 +44,6 @@ set -Ua fish_user_paths /home/pi/maven/bin
 set -U fish_greeting ""
 
 set -gx GPG_TTY (tty)
+
+# opam configuration
+source /home/pi/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
