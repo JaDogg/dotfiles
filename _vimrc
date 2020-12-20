@@ -90,7 +90,6 @@ ca shell Shell
 
 syntax enable " colours
 set backspace=indent,eol,start  " more powerful backspacing
-set spell
 
 " Search down in to subfolders
 " set path+=**
